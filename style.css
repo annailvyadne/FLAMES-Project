@@ -1,0 +1,366 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Assets/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250vh;
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  }
+
+/*animation text*/
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #FDF7C3 0%,
+    #FFDEB4 29%,
+    #FFB4B4 67%,
+    #B2A4FF 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 160px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/*WELCOME TEXT*/
+.container {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the containers vertically */
+  min-height: 200vh; /* Ensure the containers take up at least the full viewport height */
+}
+
+/* FLAMES INFO */
+.flames-info h3 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  opacity: 0; /* Set initial opacity to 0 */
+  transform: scale(0.8); /* Set initial scale to 0.8 */
+  animation: fadeInScale 1.5s ease-out forwards; /* Apply the fadeInScale animation */
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: scale(0.8); /* Set initial scale to 0.8 */
+  }
+  50% {
+    opacity: 1; /* Set mid opacity to 1 */
+    transform: scale(1.2); /* Set mid scale to 1.2 */
+  }
+  100% {
+    opacity: 1; /* Set final opacity to 1 */
+    transform: scale(1); /* Set final scale to 1 */
+  }
+}
+
+.forms-container {
+  background: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px;
+  border: 0.8px solid black;
+  padding: 20px;
+  margin: 50% auto 0; /* Center the container horizontally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 60%; 
+  max-width: 500px;
+  position: relative;
+}
+
+  .forms-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.forms-container label {
+  color: #333; /* Dark color for labels */
+  font-size: 18px;
+  margin-bottom: 8px; /* Add some spacing between labels and inputs */
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.forms-container input {
+  padding: 10px;
+  margin-bottom: 15px; /* Add some spacing between inputs */
+  width: 100%; /* Make the inputs full width */
+  box-sizing: border-box; /* Include padding and border in the total width and height */
+  border: 1px solid #ddd; /* Add a subtle border for separation */
+  border-radius: 4px; /* Add some rounded corners for a modern look */
+}
+
+.container-instruction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-instruction h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  margin-bottom: 0.8rem;
+  color: PaleGoldenRod;
+  outline: none;
+  text-align: center;
+}
+
+.container-instruction h1:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 1px;
+}
+
+.container-instruction p {
+  font-size: 1.2em;
+  line-height: 150%;
+  text-align: center;
+  color: MintCream;
+  letter-spacing: .5px;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+  .forms-container {
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    border: 0.8px solid black;
+    padding: 20px;
+    margin: 100% auto 0; /* Center the container horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 500px;
+    height: 27%;
+    position: relative;
+    top: -80%; 
+  }
+
+  .forms-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forms-container label {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .forms-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+.forms-container .center-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+  
+#submit {
+  background-color: #FFB4B4;
+  color: black;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  top: 400px;
+  position: absolute;
+  left: -160px;
+}
+
+  #submit:hover {
+    background-color: #B2A4FF;
+  }
+
+/*crush forms*/
+.crush-forms-container {
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    border: 0.8px solid black;
+    padding: 20px;
+    margin: 100% auto 0; /* Center the container horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 500px;
+    position: relative;
+    height: 27%;
+    top: -80%; 
+}
+
+.crush-forms-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.crush-forms-container label {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+.crush-forms-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .center-label {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+
+/*Summary of Results*/
+
+.rectangle-container {
+  background: rgba(255, 255, 255, 0.8);
+  width: 60%;
+  height: 30%;
+  border: 0.8px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  position: absolute;
+  top: 100%; 
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+}
+
+  .rectangle-container p {
+    margin-top: 70px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0; 
+  }
+
+  .rectangle-container p.compatibility-result {
+    font-size: 24px;
+    color: #FF5733;
+    font-weight: bold;
+    margin: 20px 0; 
+  }
+
+  .rectangle-container button {
+    background-color: #FFB4B4;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .rectangle-container button:hover {
+    background-color: #B2A4FF;
+  }
+
+
+  /*BUTTONS*/
+
+.custom-buttons .bg-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align items to the bottom */
+    position: absolute;
+    top: 110%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-buttons button {
+    margin: 0 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+.custom-buttons button:active {
+    opacity: 10; 
+}
+
+.custom-buttons #btn1,
+.custom-buttons #btn2,
+.custom-buttons #btn3 {
+    opacity: 10; /* Initially hide the background */
+    transition: opacity 0.5s ease;
+}
+
+.custom-buttons #btn1.active,
+.custom-buttons #btn2.active,
+.custom-buttons #btn3.active {
+    opacity: 1; /* Show the background on button click */
+}
+
+.custom-buttons #btn1 {
+    background: url('Assets/bg.jpg') center/cover;
+}
+
+.custom-buttons #btn2 {
+    background: url('Assets/bg-1.jpg') center/cover;
+}
+
+.custom-buttons #btn3 {
+    background: url('Assets/bg-2.jpg') center/cover;
+}
